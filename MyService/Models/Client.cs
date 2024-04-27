@@ -17,5 +17,7 @@
 
         [Required]
         public string PhoneNumber { get; set; } = null!;
+
+        public ICollection<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
     }
 }
