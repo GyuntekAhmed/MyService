@@ -65,8 +65,16 @@
 
         public static void AddClient(Client client)
         {
-            var maxId = clients.Max(c => c.ClientId);
-            client.ClientId = maxId + 1;
+            if (clients.Count == 0)
+            {
+                client.ClientId = 1;
+            }
+            else
+            {
+                var maxId = clients.Max(c => c.ClientId);
+                client.ClientId = maxId + 1;
+            }
+
             clients.Add(client);
         }
 

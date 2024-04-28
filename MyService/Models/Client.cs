@@ -35,7 +35,7 @@
 
         public string? Description { get; set; }
 
-        public string? Photo { get; set; }
+        public Image? Photo { get; set; }
 
         public decimal FinalPrice
         {

@@ -1,5 +1,6 @@
 ﻿namespace MyService
 {
+    using CommunityToolkit.Maui;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using MyService.Models;
@@ -10,9 +11,11 @@
         {
             var builder = MauiApp.CreateBuilder();
 
+            builder.UseMauiApp<App>().UseMauiCommunityToolkit();
+
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlite("Data Source=myservicedatabase.db");
+                options.UseSqlite("Data Source=app.db");
             });
 
             builder

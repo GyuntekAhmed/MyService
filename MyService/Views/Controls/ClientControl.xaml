@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="MyService.Views.Controls.ClientControl">
+
+    <ScrollView>
+    <VerticalStackLayout Spacing="10" Margin="5, 5, 5, 0">
+
+        <Frame Padding="5, 2, 5, 2">
+
+            <HorizontalStackLayout>
+                <Label Text="Име:" VerticalOptions="Center" WidthRequest="40"/>
+                <Entry x:Name="entryName" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Телефон:" VerticalOptions="Center" WidthRequest="70"/>
+                <Entry x:Name="entryPhoneNumber" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Регистрацация:" VerticalOptions="Center" WidthRequest="110"/>
+                <Entry x:Name="entryRegistrationNumber" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Марка:" VerticalOptions="Center" WidthRequest="50"/>
+                <Entry x:Name="entryBrand" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Модел:" VerticalOptions="Center" WidthRequest="50"/>
+                <Entry x:Name="entryModel" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Монтаж:" VerticalOptions="Center" WidthRequest="60"/>
+                <Entry x:Name="entryAssembly" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Демонтаж:" VerticalOptions="Center" WidthRequest="75"/>
+                <Entry x:Name="entryDissembly" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Ръжда:" VerticalOptions="Center" WidthRequest="50"/>
+                <Entry x:Name="entryRust" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Силикон:" VerticalOptions="Center" WidthRequest="70"/>
+                <Entry x:Name="entrySilicone" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Труд:" VerticalOptions="Center" WidthRequest="40"/>
+                <Entry x:Name="entryWork" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Лайсна:" VerticalOptions="Center" WidthRequest="60"/>
+                <Entry x:Name="entryMolding" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Консумативи:" VerticalOptions="Center" WidthRequest="100"/>
+                <Entry x:Name="entryConsumables" VerticalOptions="Center" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="5, 2, 5, 2">
+            <HorizontalStackLayout>
+                <Label Text="Забележка:" VerticalOptions="Center" WidthRequest="80"/>
+                <Entry x:Name="entryDescription" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <HorizontalStackLayout>
+            <Image x:Name="entryPhoto" VerticalOptions="Center" />
+            <Button Text="Качи Снимка" Clicked="OnSelectPhotoClicked"  HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        
+        <Button x:Name="btnSave" Text="Запазване" Clicked="btnSave_Clicked"/>
+        <Button x:Name="btnCancel" Text="Отмяна" Clicked="btnCancel_Clicked"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentView>

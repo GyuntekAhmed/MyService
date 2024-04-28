@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:controls="clr-namespace:MyService.Views.Controls"
+             x:Class="MyService.Views.EditClientPage"
+             Title="Редактиране на клиент">
+    <controls:ClientControl x:Name="clientCtrl"
+                             OnSave="btnUpdate_Clicked"
+                             OnCancel="btnCancel_Clicked"
+                             OnError="clientCtrl_OnError"/>
+</ContentPage>

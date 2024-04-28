@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyService.Views.ClientsPage"
+             Title="Клиенти">
+    <Grid 
+    Padding="5"
+    RowDefinitions="50, *, 50"
+    ColumnDefinitions="*">
+
+        <SearchBar
+        x:Name="SearchBar"
+        Grid.Row="0"
+        Grid.Column="0"
+        Placeholder="Търсене на клиент"
+        TextChanged="SearchBar_TextChanged">
+        </SearchBar>
+
+        <ListView
+        Grid.Row="1"
+        Grid.Column="0"
+        x:Name="listClients"
+        BackgroundColor="Transparent"
+        SeparatorColor="Aqua"
+        RowHeight="60"
+        ItemSelected="listClients_ItemSelected"
+        ItemTapped="listClients_ItemTapped">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell 
+                    Text="{Binding Name}"
+                    Detail="{Binding RegistrationNumber}">
+
+                        <TextCell.ContextActions>
+                            <MenuItem
+                            Text="Delete"
+                            IsDestructive="True"
+                            Clicked="Delete_Clicked"
+                            CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
+
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+        Grid.Row="2"
+        Grid.Column="0"
+        x:Name="btnAdd"
+        Text="Добавяне на нов клиент"
+        Clicked="BtnAdd_Clicked"/>
+    </Grid>
+</ContentPage>
